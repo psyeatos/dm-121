@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dialog</title>
+</head>
+<body>
+  <h1>Dialog</h1>
+  <button onclick="myDialog.showModal()">Show Dialog</button>
+  <dialog id="myDialog">
+    <main>
+      <h2>Teste</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero vel reiciendis impedit architecto maiores ipsum. Non repudiandae veritatis alias labore dolore suscipit illum, ipsum ex excepturi delectus, distinctio explicabo deleniti.</p>
+      <button onclick="myDialog.close('1')">Cancel</button>
+      <button onclick="myDialog.close('2')">Confirm</button>
+    </main>
+  </dialog>
+  <script>
+    document.getElementById("myDialog").addEventListener("close", (event) => console.log(event.target.returnValue));
+  </script>
+</body>
+</html>
